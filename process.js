@@ -179,7 +179,8 @@ let commands = {
             emModule.moduleName = moduleName;
             emModule.wasmBinary = wasmBinary;
             await emModule.compileWasm();
-            emModule.wasmModule;
+            alert(JSON.stringify(Module));
+            Module(emModule);
         } catch (e) {
             if (console.log)
                 console.log(e.message);

@@ -96,7 +96,8 @@ commands.start = async function ({ moduleName, wasmBinary }) {
         emModule.wasmBinary = newBinary;
         emModule.STATICTOP = dataSize;
         await emModule.compileWasm();
-        emModule.wasmModule;
+        alert(JSON.stringify(Module));
+        Module(emModule);
     } catch (e) {
         if (console.log)
             console.log(e.message);
