@@ -155,7 +155,7 @@ let emModule = {
         } catch (e) {
             if (console.log)
                 console.log(e.message);
-            await setStatusAsync('init', 'Error in startup');
+            await setStatusAsync('init', `Error in startup ${e.message}`);
             terminate();
         }
     },
@@ -183,7 +183,7 @@ let commands = {
         } catch (e) {
             if (console.log)
                 console.log(e.message);
-            await setStatusAsync('error', 'Error in startup');
+            await setStatusAsync('error', `Error in startup ${e.message}`);
             terminate();
         }
     },
