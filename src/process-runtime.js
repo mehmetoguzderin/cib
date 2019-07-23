@@ -51,7 +51,7 @@ emModule.instantiateWasmAsync = async function (imports, successCallback) {
     } catch (e) {
         if (console.log)
             console.log(e.message);
-        await setStatusAsync('init', 'Error in startup');
+        await setStatusAsync('init', `Error in startup ${e.message}`);
         terminate();
     }
 };
