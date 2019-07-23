@@ -97,7 +97,7 @@ commands.start = async function ({ moduleName, wasmBinary }) {
         emModule.STATICTOP = dataSize;
         await emModule.compileWasm();
         await setStatusAsync('error', `${JSON.stringify(Module)}`);
-        window.Module(emModule);
+        self.Module(emModule);
     } catch (e) {
         if (console.log)
             console.log(e.message);
