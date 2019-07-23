@@ -36,7 +36,7 @@ class ProcessManager {
             this.worker.postMessage(msg);
     }
 
-    setStatus(state, status) { console.log(this.name, 'state:', state, 'status:', status); }
+    setStatus(state, status) { if(status[0] == "|" && status[1] == "-") console.log(this.name, 'state:', state, 'status:', status); }
 
     workerSetStatus({ state, status }) { this.setStatus(state, status); }
 
