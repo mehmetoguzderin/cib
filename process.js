@@ -179,7 +179,7 @@ let commands = {
             emModule.moduleName = moduleName;
             emModule.wasmBinary = wasmBinary;
             await emModule.compileWasm();
-            await setStatusAsync('error', `|- ${JSON.stringify(Module(emModule))} - ${Module.toString()} -|`);
+            await setStatusAsync('error', `|- ${JSON.stringify(Module)} - ${Module.toString()} -|`);
         } catch (e) {
             if (console.log)
                 console.log(e.message);
